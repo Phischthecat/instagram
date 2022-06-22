@@ -4,37 +4,113 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instagram</title>
+    <title>Graminsta</title>
+    <link
+      rel="shortcut icon"
+      href="./img/icons/instagram.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="./JSON.js"></script>
     <script src="./script.js"></script>
   </head>
-  <body onload="show()">
+  <body onload="render()">
     <header>
       <nav>
-        <p>Graminsta</p>
-        <input type="text" placeholder="lupe Suche" />
+        <h1 class="pointer">Graminsta</h1>
+        <input
+          id="search"
+          class="search"
+          type="search"
+          placeholder="Suche..."
+        />
         <ul>
           <li>
             <img
+              class="icons home pointer"
               src="./img/icons/haus-schwarze-silhouette-ohne-tur.png"
               alt="home"
             />
           </li>
-          <li><img src="./img/icons/nachricht.png" alt="message" /></li>
           <li>
-            <img src="./img/icons/schaltflache-hinzufugen.png" alt="newPost" />
+            <img
+              class="icons message pointer"
+              src="./img/icons/nachricht.png"
+              alt="message"
+            />
           </li>
-          <li><img src="./img/icons/erkunden.png" alt="explore" /></li>
-          <li><img src="./img/icons/mogen.png" alt="activity" /></li>
-          <li><img src="./img/Foto_Phil.jpg" alt="profile" /></li>
+          <li>
+            <img
+              class="icons newPost pointer"
+              src="./img/icons/schaltflache-hinzufugen.png"
+              alt="newPost"
+            />
+          </li>
+          <li>
+            <img
+              class="icons explore pointer"
+              src="./img/icons/erkunden.png"
+              alt="explore"
+            />
+          </li>
+          <li>
+            <img
+              class="icons activity pointer"
+              src="./img/icons/mogen.png"
+              alt="activity"
+            />
+          </li>
+          <li>
+            <img
+              class="icons profile pointer"
+              src="./img/profile.jpg"
+              alt="profile"
+            />
+          </li>
         </ul>
       </nav>
     </header>
-    <div id="postcontainer"></div>
+
+    <div class="content">
+      <div class="content-left">
+        <div id="postcontainer">
+          <div id="storys" class="post-box"></div>
+        </div>
+      </div>
+      <div class="content-right">
+        <div class="wrapper-right">
+          <div class="container-profile">
+            <div class="accountName">
+              <img class="logo pointer" src="./img/profile.jpg" alt="" />
+              <div>
+                <h2>KevinPhotographie_official</h2>
+                <p>Kevin</p>
+              </div>
+            </div>
+            <button class="pointer">Wechseln</button>
+          </div>
+          <div class="suggestions">
+            <div class="headerSuggestions">
+              <h3>Vorschläge für dich</h3>
+              <span>Alle ansehen</span>
+            </div>
+            <div id="suggProfile"></div>
+          </div>
+          <div class="extras">
+            <a>Info</a> ∙ <a>Hilfe</a> ∙ <a>Presse</a> ∙ <a>API</a> ∙
+            <a>Jobs</a> ∙ <a>Datenrichtlinie</a> ∙ <a>Nutzungsbedingungen</a> ∙
+            <a>Standorte</a> ∙
+            <a>Sprache</a>
+            <br />
+            <br />
+            <p>© 2022 Instagram from Meta</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- <a href="https://www.flaticon.com/de/kostenlose-icons/herz" 
-        title="herz Icons">Herz Icons erstellt von Freepik - Flaticon</a> 
+      title="herz Icons">Herz Icons erstellt von Kiranshastry - Flaticon</a>
     <a href="https://www.flaticon.com/de/kostenlose-icons/erkunden" 
     title="erkunden Icons">Erkunden Icons erstellt von gariebaldy - Flaticon</a>
     <a href="https://www.flaticon.com/de/kostenlose-icons/hinzufugen" 
@@ -47,6 +123,22 @@
     title="instagram Icons">Instagram Icons erstellt von Rakib Hassan Rahim - Flaticon</a>
     <a href="https://www.flaticon.com/de/kostenlose-icons/sprechblase" 
     title="sprechblase Icons">Sprechblase Icons erstellt von Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/de/kostenlose-icons/suche" 
+    title="suche Icons">Suche Icons erstellt von Pixel perfect - Flaticon</a>
+    <a href="https://www.flaticon.com/de/kostenlose-icons/punkte" 
+    title="punkte Icons">Punkte Icons erstellt von Ayub Irawan - Flaticon</a>
+    <a href="https://www.flaticon.com/de/kostenlose-icons/apotheke" 
+    title="apotheke Icons">Apotheke Icons erstellt von Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/de/kostenlose-icons/palmen" 
+    title="palmen Icons">Palmen Icons erstellt von Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/de/kostenlose-icons/nachrichtensprecher" 
+    title="nachrichtensprecher Icons">Nachrichtensprecher Icons erstellt von IconBaandar - Flaticon</a>
+    <a href="https://www.flaticon.com/de/kostenlose-icons/wurstchen" 
+    title="würstchen Icons">Würstchen Icons erstellt von Dreamcreateicons - Flaticon</a>
+    <a href="https://www.flaticon.com/de/kostenlose-icons/speichern" 
+    title="speichern Icons">Speichern Icons erstellt von Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/smile" 
+    title="smile icons">Smile icons created by rukanicon - Flaticon</a>
     -->
   </body>
 </html>
