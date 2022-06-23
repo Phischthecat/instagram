@@ -99,20 +99,33 @@ function createStory(i) {
 }
 
 function addComment(i) {
+  let input = document.getElementById(`input${i}`);
+  if (input.value != 0) {
+    generateComment(i);
+  } else {
+    alert('Schreibe vorher ein Kommentar');
+  }
+}
+
+function generateComment(i) {
   let add = document.getElementById(`comment${i}`);
   add.innerHTML = '';
   let comment = document.getElementById(`input${i}`);
   content[i]['comment'].push(comment.value);
   for (let j = 0; j < content[i]['comment'].length; j++) {
-    add.innerHTML += /*html*/ `
+    add.innerHTML += createComment(i, j);
+  }
+  comment.value = '';
+}
+
+function createComment(i, j) {
+  return /*html*/ `
     <div class="comment-section">
       <img class="logoComment pointer" src="./img/profile.jpg" alt="" />
       <h3 class="pointer">KevinPhotographie_official</h3>
       <p>${content[i]['comment'][j]}</p>      
     </div> 
     `;
-  }
-  comment.value = '';
 }
 
 function like(i) {
